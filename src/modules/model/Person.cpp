@@ -1,9 +1,4 @@
-#include <chrono>
 #include <string>
-
-using namespace std::chrono;
-
-typedef high_resolution_clock::time_point time_p;
 
 template<class T>
 class Person : public Loggable {
