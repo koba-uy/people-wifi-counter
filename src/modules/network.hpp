@@ -11,6 +11,10 @@ string operator+(const string& lhs, const MacAddress& rhs) {
     return lhs + rhs.to_string();
 }
 
+string operator+(const MacAddress& lhs, const string& rhs) {
+    return lhs.to_string() + rhs;
+}
+
 #include "network/WiFiProbeRequestFrame.cpp"
 #include "network/WiFiProbeRequestSnifferDelegate.cpp"
 #include "network/WiFiProbeRequestSniffer.cpp"
