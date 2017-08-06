@@ -33,6 +33,8 @@ protected:
     void registerPerson(Person<T>* person) {
         time_p now = high_resolution_clock::now();
         
+        log->writeLine(person->id + "\t" + now);
+
         if (!isPersonRegistered(person)) {
             person->firstSeen = now;
             person->lastSeen = now;
@@ -40,6 +42,7 @@ protected:
         }
         else {
             people[person->id]->lastSeen = now;
+            delete person;
         }
     }
 
@@ -50,5 +53,7 @@ protected:
 private:
 
     map<T, Person<T>*> people;
+
+    Log* log = new PlainTextLog("people.txt");
 
 };
