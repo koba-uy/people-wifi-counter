@@ -1,6 +1,5 @@
 #include "help.cpp"
 #include "modules/counter.hpp"
-#include "modules/model.hpp"
 
 int main(int argc, char* argv[]) {
     if (argc != 2) return help(argv);

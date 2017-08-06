@@ -1,7 +1,5 @@
 #include <string>
 
-#include <iostream> // temp
-
 using namespace std;
 
 class WiFiProbeRequestPeopleCounter : public PeopleCounter<MacAddress>, public WiFiProbeRequestSnifferDelegate {
